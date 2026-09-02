@@ -1,0 +1,9 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Equipe-Beavers/Frontend-Tecsys
+[submodule "backend"]
+	path = backend
+	url = https://github.com/Equipe-Beavers/Backend-Tecsys
+[submodule "ETL-Python"]
+	path = ETL-Python
+	url = https://github.com/Equipe-Beavers/ETL-Tecsys
