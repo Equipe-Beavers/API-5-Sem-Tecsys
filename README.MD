@@ -2,27 +2,25 @@
 <br>
 
 <p align="center">
-    <a href="#sobre"> Sobre o projeto</a> &nbsp |&nbsp &nbsp
-    <a href="#requisitos"> Requisitos funcionais </a> &nbsp |&nbsp &nbsp
-    <a href="#backlog"> Backlog do produto </a> &nbsp |&nbsp &nbsp
-    <a href="#tecnologias"> Tecnologias utilizadas </a> &nbsp |&nbsp &nbsp
-    <a href="#entregas"> Entregas de sprints </a> &nbsp |&nbsp &nbsp
-    <a href="#dor-e-dod"> DoR e DoD </a> &nbsp |&nbsp &nbsp
-    <a href="#links"> Links úteis </a> &nbsp |&nbsp &nbsp
-    <a href="#equipe"> Equipe </a>
+  <b><a href="#sobre">📌 Sobre o projeto</a></b> &nbsp;&bull;&nbsp;
+  <b><a href="#requisitos">📋 Requisitos</a></b> &nbsp;&bull;&nbsp;
+  <b><a href="#backlog">🎯 Backlog</a></b> &nbsp;&bull;&nbsp;
+  <b><a href="#tecnologias">🛠️ Tecnologias</a></b>
+  <br>
+  <b><a href="#entregas">🚀 Sprints</a></b> &nbsp;&bull;&nbsp;
+  <b><a href="#dor-e-dod">✅ DoR & DoD</a></b> &nbsp;&bull;&nbsp;
+  <b><a href="#links">🔗 Documentos</a></b> &nbsp;&bull;&nbsp;
+  <b><a href="#equipe">👥 Equipe</a></b>
 </p>
-
 <span id="sobre">
 
-# ℹ️ Sobre o projeto
+# 📌 Sobre o projeto
 
 Geomash é uma aplicação para planejamento e otimização da cobertura de radiofrequência em redes de distribuição de energia elétrica. A solução utiliza dados geográficos da BDGD para permitir a seleção dos ativos que necessitam de cobertura e, a partir de parâmetros técnicos e critérios de instalação, identificar e recomendar os locais mais adequados para instalação de gateways.
 
-A aplicação permite visualizar os resultados diretamente no mapa, incluindo gateways recomendados, áreas de cobertura, ativos atendidos e não atendidos e indicadores do cenário, além de possibilitar o ajuste de parâmetros, a avaliação e a comparação de diferentes alternativas de implantação, apoiando a tomada de decisão no planejamento da infraestrutura de comunicação.
-
 <span id="requisitos">
 
-# 📄 Requisitos Funcionais
+# 📋 Requisitos Funcionais
 
 - **RF01 – Seleção da região de estudo:** O sistema deve permitir selecionar uma distribuidora e uma região geográfica, possibilitando a navegação por estado, município ou bairro e carregando somente os dados correspondentes à seleção.
 - **RF02 – Visualização e consulta dos ativos da BDGD:** O sistema deve permitir visualizar os ativos da BDGD no mapa, aplicar filtros por tipo e consultar as informações disponíveis de cada ativo.
@@ -71,29 +69,31 @@ A aplicação permite visualizar os resultados diretamente no mapa, incluindo ga
 # 🛠️ Tecnologias Utilizadas
 
 ![Dart](https://img.shields.io/badge/Dart-20232A?style=for-the-badge&logo=dart&logoColor=0175C2)
+![Flutter](https://img.shields.io/badge/Flutter-20232A?style=for-the-badge&logo=flutter&logoColor=02569B)
 ![TypeScript](https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
 ![Python](https://img.shields.io/badge/Python-20232A?style=for-the-badge&logo=python&logoColor=3776AB)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=4169E1)
+![PostGIS](https://img.shields.io/badge/PostGIS-20232A?style=for-the-badge&logo=postgresql&logoColor=336791)
 ![Jira](https://img.shields.io/badge/Jira-20232A?style=for-the-badge&logo=jira&logoColor=0052CC)
 ![Google Workspace](https://img.shields.io/badge/Google%20Workspace-20232A?style=for-the-badge&logo=google&logoColor=4285F4)
+![Figma](https://img.shields.io/badge/Figma-20232A?style=for-the-badge&logo=figma&logoColor=F24E1E)
 ![GitHub](https://img.shields.io/badge/GitHub-20232A?style=for-the-badge&logo=github&logoColor=FFFFFF)
-![AWS](https://img.shields.io/badge/AWS-20232A?style=for-the-badge&logo=amazonaws&logoColor=FF9900)
 
 
 <span id="entregas">
 
-# 🏁 Entregas de Sprints
+# 🚀 Entregas de Sprints
 
 Cada entrega foi realizada a partir da criação de uma **tag** em cada repositório, além da criação de uma branch neste repositório com um relatório completo de tudo o que foi desenvolvido naquela sprint.
 | Sprint | Previsão de entrega |      Status      | Histórico |
 | :----: | :-----------------: | :--------------: | :-------: |
-|   01   | 07/09/2026 a 27/09/2026 | Em andamento  | [Ver relatório](https://github.com/Equipe-Beavers/API-5-Sem-Tecsys/tree/sprint1) |
-|   02   |    05/10/2026 a 25/10/2026    |  Não iniciada  |     —     |
-|   03   |    02/11/2026 a 22/11/2026    |  Não iniciada  |     —     |
+|   01   | 07/09/2026 a 27/09/2026 | ✅ Concluída  | [Ver relatório](https://github.com/Equipe-Beavers/API-5-Sem-Tecsys/tree/sprint1) |
+|   02   |    05/10/2026 a 25/10/2026    |  ⭕ Não iniciada  |     —     |
+|   03   |    02/11/2026 a 22/11/2026    |  ⭕ Não iniciada  |     —     |
 
 <span id="dor-e-dod">
 
-# ☑️ DoR e DoD
+# ✅ DoR e DoD
 
 ## DoR (Definition of Ready) 
 
@@ -120,9 +120,11 @@ Cada entrega foi realizada a partir da criação de uma **tag** em cada reposit�
 
 <span id="links">
 
-# 🔗 Links úteis
+# 🔗 Documentos úteis
 
-[a adicionar]
+- [Diagrama de Entidade-Relacionamento](./assets/Diagrama%20de%20Entidade-Relacionamento%20-%20Geomash.pdf)
+- [Fluxo de trabalho no github](./assets/Fluxo%20de%20trabalho%20no%20Github%20-%20Equipe%20Beavers.pdf)
+- [Termo de Compromisso e Regras de Permanência](./assets/Termo%20de%20Compromisso%20e%20Regras%20de%20Permanência%20na%20Equipe%20Beavers.pdf)
 
 <span id="equipe">
 
