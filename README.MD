@@ -5,7 +5,8 @@
   <b><a href="#sobre">📌 Sobre o projeto</a></b> &nbsp;&bull;&nbsp;
   <b><a href="#requisitos">📋 Requisitos</a></b> &nbsp;&bull;&nbsp;
   <b><a href="#backlog">🎯 Backlog</a></b> &nbsp;&bull;&nbsp;
-  <b><a href="#tecnologias">🛠️ Tecnologias</a></b>
+  <b><a href="#tecnologias">🛠️ Tecnologias</a></b> &nbsp;&bull;&nbsp;
+  <b><a href="#estrutura-do-projeto">📂 Estrutura</a></b>
   <br>
   <b><a href="#entregas">🚀 Sprints</a></b> &nbsp;&bull;&nbsp;
   <b><a href="#dor-e-dod">✅ DoR & DoD</a></b> &nbsp;&bull;&nbsp;
@@ -22,7 +23,9 @@ Para solucionar esse problema, o **Geomash** surge como uma aplicação criada p
 
 <span id="requisitos">
 
-# 📋 Requisitos Funcionais
+# 📋 Requisitos do projeto
+
+## Requisitos Funcionais
 
 - **RF01 – Seleção da região de estudo:** O sistema deve permitir selecionar uma distribuidora e uma região geográfica, possibilitando a navegação por estado, município ou bairro e carregando somente os dados correspondentes à seleção.
 - **RF02 – Visualização e consulta dos ativos da BDGD:** O sistema deve permitir visualizar os ativos da BDGD no mapa, aplicar filtros por tipo e consultar as informações disponíveis de cada ativo.
@@ -33,6 +36,15 @@ Para solucionar esse problema, o **Geomash** surge como uma aplicação criada p
 - **RF07 – Apresentação dos indicadores do estudo:** O sistema deve apresentar indicadores do resultado, incluindo quantidade de gateways, percentual de cobertura, ativos atendidos e não atendidos, capacidade utilizada por gateway e custo estimado.
 - **RF08 – Avaliação e comparação de cenários:** O sistema deve permitir visualizar alternativas viáveis de implantação para comparar diferentes cenários por meio de seus principais resultados e indicadores.
 - **RF09 – Gerenciamento de Conta, Estudos e Cenários:** O sistema deve fornecer autenticação de usuários para acesso a uma área restrita, permitindo persistir, gerenciar e retomar estudos (salvar, restaurar configurações, estado e resultados, renomear, duplicar e excluir) e armazenar diferentes cenários associados, preservando os parâmetros e a versão da BDGD de cada execução.
+
+## Requisitos Não Funcionais
+
+- **RNF01 – Documentação e Disponibilização:** O sistema deve fornecer um Manual de Instalação disponibilizado no repositório Git e um Manual do Usuário para orientar a operação da ferramenta.
+- **RNF02 – Visualização Geográfica:** O sistema deve contar com uma interface que permita a visualização geográfica interativa dos pontos analisados e dos resultados do planejamento.
+- **RNF03 – Desempenho e Processamento:** O sistema deve possuir capacidade de processamento de conjuntos extensos de dados geográficos sem a necessidade de análise exaustiva de todas as combinações possíveis.
+- **RNF04 – Parametrização de Critérios:** O sistema deve permitir a parametrização dos principais critérios utilizados na análise, possibilitando a avaliação e comparação de diferentes cenários.
+- **RNF05 – Indicadores de Qualidade:** O sistema deve apresentar indicadores que permitam avaliar a qualidade do resultado obtido, como o percentual de pontos cobertos e a quantidade de gateways utilizados.
+- **RNF06 – Flexibilidade e Portabilidade de Dados:** O sistema deve possibilitar a utilização de dados provenientes de diferentes áreas geográficas ou distribuidoras, garantindo que a aplicação não fique restrita a um único conjunto de dados.
 
 <span id="backlog">
 
@@ -69,6 +81,16 @@ Para solucionar esse problema, o **Geomash** surge como uma aplicação criada p
 ![Figma](https://img.shields.io/badge/Figma-20232A?style=for-the-badge&logo=figma&logoColor=F24E1E)
 ![GitHub](https://img.shields.io/badge/GitHub-20232A?style=for-the-badge&logo=github&logoColor=FFFFFF)
 
+<span id="estrutura-do-projeto">
+
+# 📂 Estrutura do projeto
+
+O projeto é composto por três repositórios:
+- **[Front-end](https://github.com/Equipe-Beavers/Frontend-Tecsys):** responsável pela interface da aplicação e pela interação do usuário com os recursos de visualização, configuração e análise dos estudos.
+- **[Back-end](https://github.com/Equipe-Beavers/Backend-Tecsys):** responsável pelas regras de negócio, pelo processamento das solicitações e pela comunicação com o banco de dados e os demais serviços.
+- **[ETL](https://github.com/Equipe-Beavers/ETL-Tecsys):** responsável pela extração, transformação e carga dos dados geográficos utilizados pela aplicação.
+
+O passo a passo para executar cada parte do projeto está disponível no README do respectivo repositório.
 
 <span id="entregas">
 
