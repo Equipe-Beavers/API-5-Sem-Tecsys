@@ -3,7 +3,8 @@
 <p align="center">
 	<b><a href="#meta-da-sprint">📝 Meta da Sprint</a></b> &nbsp;&bull;&nbsp;
 	<b><a href="#objetivos-da-sprint">🎯 Objetivos</a></b> &nbsp;&bull;&nbsp;
-	<b><a href="#backlog-da-sprint">📃 Backlog</a></b>
+	<b><a href="#backlog-da-sprint">📃 Backlog</a></b> &nbsp;&bull;&nbsp;
+	<b><a href="#metricas-do-time">📈 Métricas</a></b>
 </p>
 
 <span id="meta-da-sprint"></span>
@@ -118,6 +119,7 @@ Os requisitos funcionais atendidos nesta sprint foram:
 - **Detalhamento do Ponto de Instalação do Gateway:** Cada cartão de gateway recomendado deve exibir a identificação do ativo de infraestrutura (ex: PST-80213, SE-00412), o endereço/local de instalação, as coordenadas geográficas (latitude/longitude), o tipo de ativo elétrico suporte (ex: Poste de MT, Subestação) e o alimentador ao qual pertence.
 - **Aplicação responsiva:** O sistema deve adaptar o layout e os elementos da interface automaticamente para garantir a usabilidade em dispositivos mobile, tablets e computadores.
 
+<span id="metricas-do-time"></span>
 # 📈 Métricas do Time
 
 A sprint, composta por 6 user stories e 22 tasks, registrou o progresso por meio de um gráfico de burndown que compara a taxa ideal com a real, onde o eixo X representa os dias trabalhados e o eixo Y indica as entregas e esforços. O pico de conclusão observado no final acontece porque as user stories só são contabilizadas no gráfico após 100% de sua finalização.
