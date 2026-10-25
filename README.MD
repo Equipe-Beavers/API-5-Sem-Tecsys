@@ -29,13 +29,14 @@ Para solucionar esse problema, o **Geomash** surge como uma aplicação criada p
 
 - **RF01 – Seleção da região de estudo:** O sistema deve permitir selecionar uma distribuidora e uma região geográfica, possibilitando a navegação por estado, município ou bairro e carregando somente os dados correspondentes à seleção.
 - **RF02 – Visualização e consulta dos ativos da BDGD:** O sistema deve permitir visualizar os ativos da BDGD no mapa, aplicar filtros por tipo e consultar as informações disponíveis de cada ativo.
-- **RF03 – Delimitação da área e seleção dos ativos de interesse:** O sistema deve permitir delimitar a área de interesse, considerando os ativos presentes nessa área e permitindo selecionar os ativos que necessitam de cobertura.
-- **RF04 – Criação e rastreabilidade do estudo:** O sistema deve permitir criar um estudo a partir da área selecionada, associando a distribuidora, região, ativos e registrando automaticamente a versão da BDGD utilizada.
-- **RF05 – Configuração e Otimização de Gateways e Locais**: O sistema deve permitir a configuração de perfis de RF, gateways e critérios de instalação para identificar automaticamente locais candidatos elegíveis e otimizar a seleção da melhor combinação de gateways com base nesses parâmetros.
-- **RF06 – Visualização do resultado do estudo:** O sistema deve apresentar no mapa os gateways recomendados, suas manchas de cobertura e os ativos cobertos e não cobertos.
-- **RF07 – Apresentação dos indicadores do estudo:** O sistema deve apresentar indicadores do resultado, incluindo quantidade de gateways, percentual de cobertura, ativos atendidos e não atendidos, capacidade utilizada por gateway e custo estimado.
-- **RF08 – Avaliação e comparação de cenários:** O sistema deve permitir visualizar alternativas viáveis de implantação para comparar diferentes cenários por meio de seus principais resultados e indicadores.
-- **RF09 – Gerenciamento de Conta, Estudos e Cenários:** O sistema deve fornecer autenticação de usuários para acesso a uma área restrita, permitindo persistir, gerenciar e retomar estudos (salvar, restaurar configurações, estado e resultados, renomear, duplicar e excluir) e armazenar diferentes cenários associados, preservando os parâmetros e a versão da BDGD de cada execução.
+- **RF03 – Delimitação da área e seleção dos ativos de interesse:** O sistema deve permitir delimitar a área de interesse, considerando os ativos presentes nessa área e permitindo selecionar os ativos que necessitam de cobertura e definir suas prioridades.
+- **RF04 – Criação e rastreabilidade do estudo:** O sistema deve permitir criar um estudo a partir da área selecionada, associando a distribuidora, região e ativos, e registrando automaticamente a versão da BDGD utilizada.
+- **RF05 – Configuração do Perfil de RF e gateway e reutilização de itens da Biblioteca:** O sistema deve permitir selecionar ou configurar um Perfil de RF e gateway contendo as características necessárias do equipamento, bem como cadastrar, consultar e reutilizar Perfis de RF e gateway, critérios de instalação, áreas de interesse e listas de ativos disponibilizados na Biblioteca em diferentes estudos.
+- **RF06 – Configuração dos critérios de instalação:** O sistema deve permitir configurar critérios para determinar locais elegíveis à instalação de gateways, possibilitando o uso de critérios previamente cadastrados na Biblioteca.
+- **RF07 – Análise e otimização dos locais candidatos:** O sistema deve identificar automaticamente os locais candidatos elegíveis e executar a otimização para selecionar uma combinação adequada de gateways. Devem ser considerados o relevo, os edifícios, as antenas e a vegetação do local do estudo.
+- **RF08 – Visualização dos resultados e indicadores do estudo:** O sistema deve apresentar no mapa os gateways recomendados, suas manchas de cobertura e os ativos cobertos e não cobertos, além de indicadores como quantidade de gateways, percentual de cobertura, ativos atendidos e não atendidos, capacidade utilizada por gateway e custo estimado.
+- **RF09 – Avaliação e comparação de cenários:** O sistema deve permitir visualizar alternativas viáveis de implantação, ajustar parâmetros e recalcular o estudo, bem como comparar diferentes cenários por meio de seus principais resultados e indicadores.
+- **RF10 – Autenticação e gerenciamento de estudos:** O sistema deve permitir a autenticação de usuários para acesso aos recursos persistentes da aplicação e possibilitar que usuários autenticados salvem e retomem seus estudos, restaurando suas configurações, estado de processamento e resultados, além de permitir renomear, duplicar e excluir estudos salvos.
 
 ## Requisitos Não Funcionais
 
@@ -50,21 +51,23 @@ Para solucionar esse problema, o **Geomash** surge como uma aplicação criada p
 
 # 🎯 Backlog do Produto
 
-| **RF**  | **Rank** | **Prioridade** | **User Story** | **Estimativa** | **Sprint** |
-| ------- | -------- | -------------- | -------------- | -------------- | ---------- |
-| **RF01** | 1        | Alta           | **Como planejador de cobertura,** quero consultar o mapa geoespacial consolidado com as informações da BDGD, para que eu tenha uma visão territorial precisa da rede e embase meus estudos de planejamento. | 13 | Sprint 1 |
-| **RF01** | 2        | Média          | **Como planejador de cobertura**, quero selecionar uma distribuidora e uma região, para acessar somente os dados geográficos relevantes ao meu estudo. | 5 | Sprint 1 |
-| **RF02** | 3        | Média          | **Como planejador de cobertura**, quero visualizar, filtrar e consultar os ativos da BDGD no mapa, para compreender a infraestrutura existente na região selecionada. | 5 | Sprint 1 |
-| **RF03** | 4        | Alta           | **Como planejador de cobertura**, quero delimitar uma área de interesse, para restringir a análise à região que realmente desejo estudar. | 13 | Sprint 1 |
-| **RF04** | 5        | Alta           | **Como planejador de cobertura**, quero criar um estudo a partir da área e dos ativos selecionados, para organizar a análise e manter registrada a versão da BDGD utilizada. | 8 | Sprint 1 |
-| **RF05** | 6        | Alta           | **Como planejador de cobertura**, quero obter uma recomendação inicial dos locais para instalação de gateways, utilizando critérios e parâmetros predefinidos, para obter uma primeira sugestão de posicionamento para atender aos ativos selecionados. | 5 | Sprint 1 |
-| **RF05** | 9        | Alta           | **Como planejador de cobertura**, quero que o sistema estime a cobertura e a capacidade de atendimento de cada local candidato, para que a otimização considere quais ativos podem ser atendidos por cada gateway. | 5 | Sprint 2 |
-| **RF05** | 10       | Alta           | **Como planejador de cobertura**, quero executar e acompanhar a otimização considerando os parâmetros, critérios e restrições configurados no estudo, para obter uma combinação de gateways adequada ao cenário. | 8 | Sprint 2 |
-| **RF06** | 11       | Alta           | **Como planejador de cobertura**, quero visualizar no mapa os gateways recomendados, suas manchas de cobertura e os ativos atendidos e não atendidos, para compreender espacialmente o resultado da análise. | 8 | Sprint 2 |
-| **RF07** | 12       | Alta           | **Como planejador de cobertura**, quero visualizar os principais indicadores do estudo, incluindo percentual de cobertura, quantidade de gateways, capacidade utilizada e custo estimado, para avaliar quantitativamente a qualidade da solução. | 5 | Sprint 2 |
-| **RF09** | 18       | Alta           | **Como planejador de cobertura**, quero salvar diferentes configurações e resultados como cenários de um mesmo estudo, para preservar as alternativas analisadas. | 8 | Sprint 3 |
-| **RF08** | 14       | Média          | **Como planejador de cobertura**, quero visualizar alternativas de implantação, para avaliar outras combinações viáveis de gateways além da solução principal. | 5 | Sprint 3 |
-| **RF08** | 19       | Média          | **Como planejador de cobertura**, quero comparar diferentes cenários pelos seus principais resultados, para identificar qual o cenário mais adequado ao estudo. | 5 | Sprint 3 |
+| **RF** | **Rank** | **Prioridade** | **User Story** | **Estimativa** | **Sprint** |
+|---|---:|---|---|---:|---|
+| **RF02** | 1 | Alta | **Como planejador de cobertura,** quero consultar o mapa geoespacial consolidado com as informações da BDGD, para que eu tenha uma visão territorial precisa da rede e embase meus estudos de planejamento. | 13 | Sprint 1 |
+| **RF01** | 2 | Média | **Como planejador de cobertura,** quero selecionar uma distribuidora e uma região, para acessar somente os dados geográficos relevantes ao meu estudo. | 5 | Sprint 1 |
+| **RF02** | 3 | Média | **Como planejador de cobertura,** quero visualizar, filtrar e consultar os ativos da BDGD no mapa, para compreender a infraestrutura existente na região selecionada. | 5 | Sprint 1 |
+| **RF03** | 4 | Alta | **Como planejador de cobertura,** quero delimitar uma área de interesse e selecionar e priorizar os ativos que necessitam de cobertura, para restringir a análise à região e aos ativos que realmente desejo estudar. | 13 | Sprint 1 |
+| **RF04** | 5 | Alta | **Como planejador de cobertura,** quero criar um estudo a partir da área e dos ativos selecionados, para organizar a análise e manter registrada a versão da BDGD utilizada. | 8 | Sprint 1 |
+| **RF07** | 6 | Alta | **Como planejador de cobertura,** quero obter uma recomendação inicial dos locais para instalação de gateways, utilizando critérios e parâmetros predefinidos, para obter uma primeira sugestão de posicionamento para atender aos ativos selecionados. | 5 | Sprint 1 |
+| **RF05** | 7 | Média | **Como planejador de cobertura,** quero configurar o Perfil de RF e gateway do estudo, para que a cobertura e a capacidade sejam calculadas conforme o equipamento considerado. | 5 | Sprint 2 |
+| **RF06** | 8 | Média | **Como planejador de cobertura,** quero configurar os critérios de instalação, para que somente locais tecnicamente permitidos sejam considerados como candidatos. | 8 | Sprint 2 |
+| **RF07** | 9 | Alta | **Como planejador de cobertura,** quero executar e acompanhar a otimização considerando os parâmetros, critérios e restrições configurados no estudo, para obter uma combinação de gateways adequada ao cenário. | 13 | Sprint 2 |
+| **RF08** | 10 | Alta | **Como planejador de cobertura,** quero visualizar no mapa os gateways recomendados, suas manchas de cobertura e os ativos atendidos e não atendidos, além dos indicadores do estudo, para compreender espacialmente os resultados da análise, com foco na configuração recomendada. | 5 | Sprint 2 |
+| **RF07** | 11 | Média | **Como planejador de cobertura,** quero visualizar informações geográficas e ambientais da região de estudo no mapa, para identificar características do terreno, estruturas existentes e possíveis obstáculos que influenciem o planejamento da cobertura de RF. | 13 | Sprint 2 |
+| **RF10** | 12 | Média | **Como usuário,** quero me autenticar na aplicação, para salvar estudos e utilizar os recursos persistentes. | 5 | Sprint 3 |
+| **RF09** | 13 | Média | **Como planejador de cobertura,** quero visualizar alternativas de implantação, para avaliar outras combinações viáveis de gateways além da solução principal. | 5 | Sprint 3 |
+| **RF07** | 14 | Alta | **Como planejador de cobertura,** quero que as informações de relevo, antenas e estruturas existentes, vegetação e edifícios sejam consideradas na análise dos locais candidatos e no cálculo de propagação de RF, para que a otimização recomende gateways considerando as características reais do ambiente. | 13 | Sprint 3 |
+
 
 <span id="tecnologias">
 
@@ -96,11 +99,11 @@ O passo a passo para executar cada parte do projeto está disponível no README 
 
 # 🚀 Entregas de Sprints
 
-Cada entrega foi realizada a partir da criação de uma **tag** em cada repositório, além da criação de uma branch neste repositório com um relatório completo de tudo o que foi desenvolvido naquela sprint.
+Cada entrega foi realizada e documentada em cada uma das branchs neste repositório com um relatório completo de tudo o que foi desenvolvido naquela sprint.
 | Sprint | Previsão de entrega |      Status      | Histórico |
 | :----: | :-----------------: | :--------------: | :-------: |
 |   01   | 07/09/2026 a 27/09/2026 | ✅ Concluída  | [Ver relatório](https://github.com/Equipe-Beavers/API-5-Sem-Tecsys/tree/sprint1) |
-|   02   |    05/10/2026 a 25/10/2026    |  ⭕ Não iniciada  |     —     |
+|   02   |    05/10/2026 a 25/10/2026    |  ✅ Concluída  |     [Ver relatório](https://github.com/Equipe-Beavers/API-5-Sem-Tecsys/tree/sprint2)     |
 |   03   |    02/11/2026 a 22/11/2026    |  ⭕ Não iniciada  |     —     |
 
 <span id="dor-e-dod">
