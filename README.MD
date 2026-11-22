@@ -1,114 +1,108 @@
 ![Banner Geomash](./assets/banner_geomash.png)
 
 <p align="center">
-	<b><a href="#meta-da-sprint">📝 Meta da Sprint</a></b> &nbsp;&bull;&nbsp;
+	<b><a href="#meta-da-sprint">📌 Meta da Sprint</a></b> &nbsp;&bull;&nbsp;
 	<b><a href="#objetivos-da-sprint">🎯 Objetivos</a></b> &nbsp;&bull;&nbsp;
 	<b><a href="#backlog-da-sprint">📃 Backlog</a></b> &nbsp;&bull;&nbsp;
 	<b><a href="#metricas-do-time">📈 Métricas</a></b>
 </p>
 
 <span id="meta-da-sprint"></span>
-# 📝 Meta da Sprint 
+# 📌 Meta da Sprint 
 
-Permitir que o usuário personalize os estudos por meio da seleção de perfis de RF e critérios de instalação próprios, substituindo as configurações padrão por parâmetros adequados às características dos equipamentos e às condições de instalação. Dessa forma, o sistema poderá gerar recomendações de posicionamento de gateways mais alinhadas às necessidades de cada estudo.
+Habilitar a gestão individualizada de projetos através da autenticação de usuários, assegurando que cada perfil mantenha seu histórico de estudos, parâmetros de instalação e configurações de RF salvos para consultas e edições futuras.
 
 <span id="objetivos-da-sprint"></span>
 # 🎯 Objetivos da Sprint
 
 Os requisitos funcionais atendidos nesta sprint foram:
 
-- **✔️ RF05 – Configuração do Perfil de RF e gateway e reutilização de itens da Biblioteca:** O sistema deve permitir selecionar ou configurar um Perfil de RF e gateway contendo as características necessárias do equipamento, bem como cadastrar, consultar e reutilizar Perfis de RF e gateway, critérios de instalação, áreas de interesse e listas de ativos disponibilizados na Biblioteca em diferentes estudos.
-- **✔️ RF06 – Configuração dos critérios de instalação:** O sistema deve permitir configurar critérios para determinar locais elegíveis à instalação de gateways, possibilitando o uso de critérios previamente cadastrados na Biblioteca.
-- **✔️ RF07 – Análise e otimização dos locais candidatos:** O sistema deve identificar automaticamente os locais candidatos elegíveis e executar a otimização para selecionar uma combinação adequada de gateways. Devem ser considerados o relevo, os edifícios, as antenas e a vegetação do local do estudo.
-- **✔️ RF08 – Visualização dos resultados e indicadores do estudo:** O sistema deve apresentar no mapa os gateways recomendados, suas manchas de cobertura e os ativos cobertos e não cobertos, além de indicadores como quantidade de gateways, percentual de cobertura, ativos atendidos e não atendidos, capacidade utilizada por gateway e custo estimado.
+- **✔️ RF10 - Autenticação e gerenciamento de estudos:** Foi implementado o fluxo de cadastro e login de usuários, com validação das credenciais e gerenciamento de sessão. Os estudos e suas configurações passaram a ser vinculados ao usuário autenticado, assegurando que cada pessoa acesse apenas seus próprios dados persistidos.
+- **✔️ RF09 - Avaliação e comparação de cenários:** Foram disponibilizadas alternativas de implantação além da solução otimizada principal. O usuário pode selecionar cada cenário para consultar sua configuração, os gateways recomendados, a cobertura gerada e seus indicadores específicos.
+- **✔️ RF07 - Análise e otimização dos locais candidatos:** A análise de elegibilidade e o cálculo de propagação passaram a considerar informações ambientais e geográficas, como relevo, vegetação, edificações, antenas e estruturas existentes. Esses fatores influenciam a seleção dos locais candidatos e a recomendação dos gateways.
+- **✔️ RF08 - Exportação dos resultados do estudo:** Foi disponibilizada a exportação dos resultados de estudos processados em PDF. O arquivo reúne a identificação do estudo, a região analisada, os indicadores calculados e, quando aplicável, os resultados dos cenários alternativos.
+- **✔️ RF02 - Importação de ativos para o estudo:** Foi implementada a importação de arquivos com ativos da região de interesse, em formatos compatíveis como CSV e GeoJSON. Os dados são validados, exibidos no mapa e associados ao estudo sem alterar a base BDGD original.
 
 <span id="backlog-da-sprint"></span>
 # 📃 Backlog da Sprint
 
-<span id="rf05-rank-7"></span>
-## 📌 RF05 — Rank 7 | Prioridade: Média | Estimativa: 5 pts
-* **User Story:** **Como planejador de cobertura,** quero configurar o Perfil de RF e gateway do estudo, para que a cobertura e a capacidade sejam calculadas conforme o equipamento considerado.
+<span id="rf10-rank-12"></span>
+## 📌 RF10 - Rank 12 | Prioridade: Média | Estimativa: 5 pts
 
-<span id="rf05-rank-7-criterios-de-aceitacao"></span>
+* **User Story:** **Como usuário,** quero me autenticar na aplicação, para salvar estudos e utilizar os recursos persistentes.
+
 ### Critérios de Aceitação:
-- **Cadastro do Perfil de RF:** O sistema deve permitir criar um Perfil de RF com os parâmetros necessários para caracterizar o gateway utilizado na análise.
-- **Parâmetros do Gateway:** O sistema deve permitir informar o nome da configuração, frequência de operação (MHz), potência de transmissão (dBm), sensibilidade de recepção (dBm), altura do gateway/ERB em relação ao solo (m), altura do dispositivo/ativo em relação ao solo (m), ganho ou atenuação adicional (dB, opcional) e quantidade máxima de ativos atendidos por gateway (opcional).
-- **Fatores de propagação:** O sistema deve permitir considerar relevo, vegetação e demais fatores de atenuação ou bloqueio do sinal, conforme os dados disponíveis e o modelo de propagação utilizado.
-- **Validação dos parâmetros:** O sistema deve validar os valores informados e impedir o processamento quando houver parâmetros obrigatórios ausentes ou inválidos.
-- **Edição e exclusão do Perfil:** O usuário deve poder alterar os parâmetros do Perfil de RF e excluir o cadastro quando necessário.
-- **Associação ao estudo:** O Perfil de RF selecionado/configurado deve ficar vinculado ao estudo e ser utilizado no processamento da cobertura e da otimização.
-- **Integração com o cálculo de propagação:** O cálculo de perda de propagação deve utilizar os parâmetros definidos no Perfil de RF, substituindo valores fixos ou padrão quando configurados pelo usuário.
-- **Persistência:** Ao salvar o estudo, o sistema deve manter uma cópia dos parâmetros do Perfil de RF utilizados na análise, permitindo identificar posteriormente a configuração considerada, mesmo após a edição ou exclusão do perfil original.
-- **Aplicação responsiva:** O sistema deve adaptar o layout dos elementos de configuração para garantir a usabilidade em computadores, tablets e dispositivos mobile.
 
-<span id="rf06-rank-8"></span>
-## 📌 RF06 — Rank 8 | Prioridade: Média | Estimativa: 8 pts
-* **User Story:** **Como planejador de cobertura,** quero configurar os critérios de instalação, para que somente locais tecnicamente permitidos sejam considerados como candidatos.
+- **Cadastro de usuário:** O sistema deve permitir o cadastro de novos usuários, solicitando as informações necessárias, como nome de usuário, e-mail e senha.
+- **Validação de cadastro:** O sistema deve impedir o cadastro de e-mails ou nomes de usuário já existentes e validar o preenchimento dos campos obrigatórios.
+- **Autenticação:** O sistema deve disponibilizar uma tela de login com e-mail e senha, permitindo o acesso aos recursos da aplicação após a validação das credenciais.
+- **Validação de credenciais:** O sistema deve informar quando as credenciais forem inválidas, sem permitir o acesso aos recursos restritos.
+- **Gerenciamento de sessão:** O sistema deve manter a sessão do usuário autenticado durante a navegação e disponibilizar uma opção para encerrar a sessão.
+- **Isolamento de dados:** Cada usuário deve ter acesso somente aos seus próprios estudos salvos, impedindo a visualização ou alteração de estudos pertencentes a outros usuários.
 
-<span id="rf06-rank-8-criterios-de-aceitacao"></span>
+<span id="rf09-rank-13"></span>
+## 📌 RF09 - Rank 13 | Prioridade: Média | Estimativa: 5 pts
+
+* **User Story:** **Como planejador de cobertura,** quero visualizar alternativas de implantação, para avaliar outras combinações viáveis de gateways além da solução principal.
+
 ### Critérios de Aceitação:
-- **Configuração dos critérios:** O sistema deve permitir configurar os critérios que determinam se um local pode ser considerado elegível para instalação de um gateway.
-- **Tipos de locais permitidos e proibidos:** O sistema deve permitir definir os tipos de locais ou estruturas permitidos e os locais ou condições que impedem a instalação.
-- **Critério de alimentação:** O sistema deve permitir configurar se o local candidato necessita possuir disponibilidade de alimentação elétrica.
-- **Critério de distância:** O sistema deve permitir configurar uma distância máxima aplicável à seleção dos locais candidatos.
-- **Critérios ambientais:** O sistema deve permitir utilizar informações de relevo, vegetação e edificações na avaliação de elegibilidade, conforme as regras definidas para o estudo.
-- **Critério de antenas e infraestrutura:** O sistema deve permitir considerar informações de antenas ou estruturas existentes quando forem relevantes para a análise.
-- **Pesquisa das fontes de dados:** Antes da implementação de cada fonte externa, deve ser realizada análise técnica sobre disponibilidade, cobertura, formato, limitações de acesso e viabilidade de uso dos dados de relevo, vegetação, edificações e antenas.
-- **Integração dos dados geográficos:** Os dados externos selecionados devem ser processados e disponibilizados ao mecanismo de avaliação dos candidatos dentro da área do estudo.
-- **Avaliação de elegibilidade:** O sistema deve avaliar os possíveis locais de instalação de acordo com os critérios configurados e classificá-los como elegíveis ou não elegíveis.
-- **Geração dos candidatos:** Somente os locais que atenderem aos critérios configurados devem compor o conjunto de candidatos disponibilizado para a otimização.
-- **Identificação das restrições:** Quando um local não for elegível, o sistema deve identificar o critério que ocasionou sua restrição, permitindo rastrear a decisão.
-- **Persistência dos critérios:** Os critérios utilizados devem ser armazenados juntamente com o estudo para garantir a rastreabilidade da configuração usada no processamento.
 
-<span id="rf07-rank-9"></span>
-## 📌 RF07 — Rank 9 | Prioridade: Média | Estimativa: 13 pts
-* **User Story:** **Como planejador de cobertura,** quero executar e acompanhar a otimização considerando os parâmetros, critérios e restrições configurados no estudo, para obter uma combinação de gateways adequada ao cenário.
+- **Geração de alternativas:** O sistema deve disponibilizar 5 alternativas de implantação, além da configuração otimizada principal.
+- **Identificação dos cenários:** O sistema deve identificar claramente a configuração otimizada e as alternativas disponíveis, permitindo diferenciá-las.
+- **Seleção de cenário:** O sistema deve permitir selecionar uma alternativa para visualizar seus resultados individualmente.
+- **Visualização geográfica:** Ao selecionar um cenário, o mapa deve atualizar a localização dos gateways recomendados, suas respectivas manchas de cobertura e os ativos atendidos e não atendidos.
+- **Indicadores por cenário:** O sistema deve apresentar os principais indicadores de cada alternativa, incluindo quantidade de gateways, percentual de cobertura, quantidade de ativos atendidos e não atendidos e capacidade utilizada.
+- **Consistência dos resultados:** Cada cenário deve apresentar seus próprios resultados, garantindo que a seleção de uma alternativa não altere indevidamente os dados de outro cenário.
 
-<span id="rf07-rank-9-criterios-de-aceitacao"></span>
+<span id="rf07-rank-14"></span>
+## 📌 RF07 - Rank 14 | Prioridade: Alta | Estimativa: 8 pts
+
+* **User Story:** **Como planejador de cobertura,** quero que as informações de relevo, antenas e estruturas existentes, vegetação e edifícios sejam consideradas na análise dos locais candidatos e no cálculo de propagação de RF, para que a otimização recomende gateways considerando as características reais do ambiente.
+
 ### Critérios de Aceitação:
-- **Execução do estudo:** O sistema deve permitir iniciar o processamento da otimização após a configuração do Perfil de RF e dos critérios de instalação.
-- **Validação antes do processamento:** O sistema deve verificar se todos os parâmetros obrigatórios para a execução foram configurados antes de iniciar a otimização.
-- **Candidatos elegíveis:** O algoritmo deve utilizar somente os locais classificados como elegíveis pelos critérios de instalação.
-- **Integração com o algoritmo da Sprint 1:** O algoritmo existente de perda de propagação e seleção de gateways deve ser utilizado como base para a nova otimização, sem considerar locais eliminados pelos critérios de instalação.
-- **Consideração do Perfil de RF:** A análise deve utilizar os parâmetros do Perfil de RF configurado para o estudo.
-- **Consideração da cobertura e capacidade:** A otimização deve considerar a capacidade de cada candidato de atender aos ativos selecionados dentro das condições de propagação estabelecidas.
-- **Consideração das prioridades:** Quando houver prioridades definidas para os ativos, o algoritmo deve considerá-las na seleção da solução.
-- **Respeito às restrições:** A combinação final de gateways não deve conter locais que violem os critérios de instalação configurados.
-- **Seleção da combinação:** O sistema deve selecionar uma combinação de gateways entre os candidatos elegíveis, buscando atender aos objetivos definidos para o estudo.
-- **Acompanhamento do processamento:** O sistema deve informar o estado do processamento e disponibilizar o resultado quando a otimização for concluída.
-- **Tratamento de ausência de solução:** Caso não existam candidatos elegíveis ou não seja possível obter uma solução dentro das restrições configuradas, o sistema deve informar claramente essa situação ao usuário.
 
-<span id="rf08-rank-10"></span>
-## 📌 RF08 — Rank 10 | Prioridade: Alta | Estimativa: 5 pts
-* **User Story:** **Como planejador de cobertura,** quero visualizar no mapa os gateways recomendados, suas manchas de cobertura e os ativos atendidos e não atendidos, para compreender espacialmente o resultado da análise.
+- **Dados de relevo:** O sistema deve utilizar informações de elevação do terreno para identificar variações topográficas que possam influenciar a propagação do sinal de RF.
+- **Dados de vegetação:** O sistema deve considerar a presença de vegetação na região de estudo como possível fonte de atenuação do sinal.
+- **Dados de edificações:** O sistema deve identificar construções e estruturas que possam representar obstáculos à propagação do sinal ou inviabilizar determinados locais de instalação.
+- **Dados de antenas e infraestrutura existente:** O sistema deve considerar informações disponíveis sobre antenas e estruturas existentes na região, avaliando sua influência na escolha dos locais candidatos e no planejamento da cobertura.
+- **Influência na propagação de RF:** Os dados geográficos e ambientais disponíveis devem ser utilizados no cálculo de propagação, aplicando as respectivas condições de atenuação ou bloqueio quando pertinentes.
+- **Influência na seleção de candidatos:** A análise das características ambientais deve influenciar a identificação e a elegibilidade dos locais candidatos à instalação dos gateways.
+- **Integração com a otimização:** O algoritmo de otimização deve utilizar os resultados da análise ambiental para selecionar os gateways, em vez de considerar exclusivamente a distância entre os pontos.
+- **Disponibilidade dos dados:** Caso alguma fonte de informação geográfica ou ambiental não esteja disponível para determinada região, o sistema deve permitir a continuidade do estudo, sem apresentar dados inexistentes como informações confirmadas.
 
-<span id="rf08-rank-10-criterios-de-aceitacao"></span>
+<span id="rf08-rank-15"></span>
+## 📌 RF08 - Rank 15 | Prioridade: Baixa | Estimativa: 5 pts
+
+* **User Story:** **Como planejador de cobertura,** quero exportar os resultados do estudo em um arquivo PDF, para compartilhar as informações e os resultados do planejamento fora da aplicação.
+
 ### Critérios de Aceitação:
-- **Exibição dos gateways:** Após a conclusão da otimização, o sistema deve apresentar no mapa a localização dos gateways recomendados.
-- **Mancha de cobertura:** O sistema deve representar no mapa a área de cobertura associada a cada gateway recomendado.
-- **Relação gateway × cobertura:** O usuário deve conseguir identificar qual área de cobertura pertence a cada gateway recomendado.
-- **Ativos cobertos e não cobertos:** O sistema deve destacar os ativos atendidos e diferenciar os ativos que permaneceram sem cobertura.
-- **Visualização conjunta:** O mapa deve permitir visualizar simultaneamente gateways, manchas de cobertura e ativos analisados.
-- **Consulta do gateway:** O usuário deve poder selecionar um gateway no mapa e visualizar informações relacionadas à sua solução de cobertura.
-- **Aplicação responsiva:** A visualização dos gateways, manchas e ativos deve permanecer utilizável em computadores, tablets e dispositivos mobile.
 
-<span id="rf09-rank-11"></span>
-## 📌 RF09 — Rank 11 | Prioridade: Média | Estimativa: 13 pts
-* **User Story:** **Como planejador de cobertura,** quero visualizar informações geográficas e ambientais da região de estudo no mapa, para identificar características do terreno, estruturas existentes e possíveis obstáculos que influenciem o planejamento da cobertura de RF.
+- **Opção de exportação:** O sistema deve disponibilizar uma opção para realizar o download em PDF dos resultados de um estudo processado.
+- **Identificação do estudo:** O arquivo exportado deve apresentar informações de identificação do estudo, incluindo seu nome, região analisada e data de geração.
+- **Indicadores do estudo:** A exportação deve incluir os principais indicadores calculados, como quantidade de gateways utilizados, percentual de cobertura, quantidade de ativos atendidos e não atendidos e capacidade utilizada.
+- **Resultados de cenários alternativos:** Quando disponíveis, o sistema deve permitir incluir os resultados das alternativas de implantação na exportação.
+- **Disponibilidade do download:** Após a geração do arquivo, o sistema deve disponibilizar o download diretamente pela interface da aplicação.
+- **Integridade dos dados:** As informações exportadas devem corresponder aos resultados efetivamente calculados e apresentados no estudo, sem divergências entre os dados do arquivo e os dados da aplicação.
 
-<span id="rf09-rank-11-criterios-de-aceitacao"></span>
+<span id="rf02-rank-16"></span>
+## 📌 RF02 - Rank 16 | Prioridade: Baixa | Estimativa: 5 pts
+
+* **User Story:** **Como planejador de cobertura,** quero importar um arquivo contendo os ativos que serão utilizados no estudo, para personalizar a análise com dados de uma versão específica da BDGD ou de uma região de interesse, em vez de utilizar exclusivamente os dados disponibilizados automaticamente pela aplicação.
+
 ### Critérios de Aceitação:
-- **Camadas geográficas e ambientais:** O sistema deve permitir visualizar as camadas de relevo, vegetação, edificações e antenas, que são fatores relevantes à propagação do sinal.
-- **Controle de camadas:** O usuário deve poder ativar, desativar e combinar as camadas, com identificação visual clara de cada tipo de informação.
-- **Legenda e simbologia:** O mapa deve apresentar legenda, escala e simbologia consistente para que o usuário interprete corretamente as informações exibidas.
-- **Consulta de elementos:** O usuário deve poder selecionar um elemento geográfico ou ambiental e visualizar seus atributos relevantes, como tipo, localização, altura, classificação ou fonte dos dados, quando disponíveis.
-- **Aplicação responsiva:** O layout, os controles de camadas, a legenda e as consultas devem permanecer utilizáveis em computadores, tablets e dispositivos mobile.
 
+- **Importação de arquivo:** O sistema deve disponibilizar uma opção para selecionar e enviar um arquivo contendo os ativos que serão utilizados no estudo.
+- **Formatos suportados:** O sistema deve aceitar arquivos em formatos geográficos compatíveis com a aplicação, como CSV e GeoJSON, respeitando a estrutura de dados esperada.
+- **Validação do arquivo:** O sistema deve verificar se o arquivo possui os campos obrigatórios, informações geográficas válidas e estrutura compatível com o processamento.
+- **Identificação dos ativos:** O sistema deve interpretar os registros importados, identificando suas coordenadas, tipos e demais atributos necessários para a análise.
+- **Visualização dos ativos importados:** Após a importação, o sistema deve apresentar os ativos no mapa, permitindo verificar sua distribuição geográfica e as informações disponíveis.
+- **Integração com o estudo:** Os ativos importados devem ser associados ao estudo correspondente e utilizados nas etapas de seleção, análise de cobertura e otimização dos gateways.
+- **Preservação dos dados originais:** A importação não deve modificar ou sobrescrever a base BDGD original disponibilizada pela aplicação.
 
 <span id="metricas-do-time"></span>
 # 📈 Métricas do Time
 
-A sprint, composta por 5 user stories e 25 tasks, registrou o progresso por meio de um gráfico de burndown que compara a taxa ideal com a real, onde o eixo X representa os dias trabalhados e o eixo Y indica as entregas e esforços. O pico de conclusão observado no final acontece porque as tasks só são contabilizadas no gráfico após 100% de sua finalização - com revisão de código, ajustes necessário e ai sim integração.
+A sprint, composta por 5 user stories e 14 tasks, registrou o progresso por meio de um gráfico de burndown que compara a taxa ideal com a real, onde o eixo X representa os dias trabalhados e o eixo Y indica as entregas e esforços. O pico de conclusão observado no final acontece porque as tasks só são contabilizadas no gráfico após 100% de sua finalização - com revisão de código, ajustes necessário e ai sim integração.
 
-![Burndown](./assets/Burndown%20-%202°%20sprint.jpg)
+![Burndown](./assets/Burndown%20-%203°%20sprint.png)
 
