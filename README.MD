@@ -66,7 +66,9 @@ Para solucionar esse problema, o **Geomash** surge como uma aplicação criada p
 | **RF07** | 11 | Média | **Como planejador de cobertura,** quero visualizar informações geográficas e ambientais da região de estudo no mapa, para identificar características do terreno, estruturas existentes e possíveis obstáculos que influenciem o planejamento da cobertura de RF. | 13 | Sprint 2 |
 | **RF10** | 12 | Média | **Como usuário,** quero me autenticar na aplicação, para salvar estudos e utilizar os recursos persistentes. | 5 | Sprint 3 |
 | **RF09** | 13 | Média | **Como planejador de cobertura,** quero visualizar alternativas de implantação, para avaliar outras combinações viáveis de gateways além da solução principal. | 5 | Sprint 3 |
-| **RF07** | 14 | Alta | **Como planejador de cobertura,** quero que as informações de relevo, antenas e estruturas existentes, vegetação e edifícios sejam consideradas na análise dos locais candidatos e no cálculo de propagação de RF, para que a otimização recomende gateways considerando as características reais do ambiente. | 13 | Sprint 3 |
+| **RF07** | 14 | Alta | **Como planejador de cobertura,** quero que as informações de relevo, antenas e estruturas existentes, vegetação e edifícios sejam consideradas na análise dos locais candidatos e no cálculo de propagação de RF, para que a otimização recomende gateways considerando as características reais do ambiente. | 8 | Sprint 3 |
+| **RF08** | 15 | Baixa | **Como planejador de cobertura,** quero exportar os resultados do estudo em um arquivo PDF, para compartilhar as informações e os resultados do planejamento fora da aplicação. | 5 | Sprint 3 |
+| **RF02** | 16 | Baixa | **Como planejador de cobertura,** quero importar um arquivo contendo os ativos que serão utilizados no estudo, para personalizar a análise com dados de uma versão específica da BDGD ou de uma região de interesse, em vez de utilizar exclusivamente os dados disponibilizados automaticamente pela aplicação. | 5 | Sprint 3 |
 
 
 <span id="tecnologias">
@@ -83,6 +85,8 @@ Para solucionar esse problema, o **Geomash** surge como uma aplicação criada p
 ![Google Workspace](https://img.shields.io/badge/Google%20Workspace-20232A?style=for-the-badge&logo=google&logoColor=4285F4)
 ![Figma](https://img.shields.io/badge/Figma-20232A?style=for-the-badge&logo=figma&logoColor=F24E1E)
 ![GitHub](https://img.shields.io/badge/GitHub-20232A?style=for-the-badge&logo=github&logoColor=FFFFFF)
+![AWS](https://img.shields.io/badge/AWS-20232A?style=for-the-badge&logo=amazonaws&logoColor=FF9900)
+![Canva](https://img.shields.io/badge/Canva-20232A?style=for-the-badge&logo=canva&logoColor=00C4CC)
 
 <span id="estrutura-do-projeto">
 
@@ -104,7 +108,7 @@ Cada entrega foi realizada e documentada em cada uma das branchs neste repositó
 | :----: | :-----------------: | :--------------: | :-------: |
 |   01   | 07/09/2026 a 27/09/2026 | ✅ Concluída  | [Ver relatório](https://github.com/Equipe-Beavers/API-5-Sem-Tecsys/tree/sprint1) |
 |   02   |    05/10/2026 a 25/10/2026    |  ✅ Concluída  |     [Ver relatório](https://github.com/Equipe-Beavers/API-5-Sem-Tecsys/tree/sprint2)     |
-|   03   |    02/11/2026 a 22/11/2026    |  ⭕ Não iniciada  |     —     |
+|   03   |    02/11/2026 a 22/11/2026    |  ✅ Concluída  |     [Ver relatório](https://github.com/Equipe-Beavers/API-5-Sem-Tecsys/tree/sprint3)     |
 
 <span id="dor-e-dod">
 
